@@ -97,9 +97,13 @@
         "prestashop/statssearch": "^2",
         "prestashop/statsstock": "^2",
         "prestashop/statsvisits": "^2",
-        "prestashop/translationtools-bundle": "^4.0",
         "prestashop/welcome": "^6",
-        "sensio/distribution-bundle": "^5.0",
+        "sensiolabs/security-checker": "~5.0|~6.0",
+        "symfony/config": "^4.4 || ^5.0",
+        "symfony/dependency-injection": "^4.4 || ^5.0",
+        "symfony/filesystem": "^4.4 || ^5.0",
+        "symfony/http-kernel": "^4.4 || ^5.0",
+        "symfony/process": "^4.4 || ^5.0",
         "sensio/framework-extra-bundle": "^5.1",
         "shudrum/array-finder": "^1.1.0",
         "smarty/smarty": "^3.1.31",
@@ -110,7 +114,7 @@
         "symfony/polyfill-mbstring": "^1.12",
         "symfony/polyfill-php73": "^1.10",
         "symfony/swiftmailer-bundle": "^3.1",
-        "symfony/symfony": ">=3.4.26",
+        "symfony/symfony": "^4.4",
         "tecnickcom/tcpdf": "^6.2.12",
         "tijsverkoyen/css-to-inline-styles": "^2.2",
         "twig/twig": "^1.38"
@@ -132,7 +136,7 @@
         "mikey179/vfsstream": "^1.6",
         "phake/phake": "@stable",
         "phpunit/phpunit": "~7.5.18",
-        "symfony/phpunit-bridge": "^3.4"
+        "symfony/phpunit-bridge": "^4.4 || ^5.0"
     },
     "autoload-dev": {
         "psr-4": {
