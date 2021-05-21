@@ -1,19 +1,19 @@
 <?php
 
-ini_set('memory_limit','256M');
-
 $finder = PhpCsFixer\Finder::create()->in([
-    __DIR__.'/src',
-    __DIR__.'/classes',
-    __DIR__.'/controllers',
-    __DIR__.'/tests',
-    __DIR__.'/tools/profiling',
+    __DIR__ . '/src',
+    __DIR__ . '/classes',
+    __DIR__ . '/controllers',
+    __DIR__ . '/tests',
+    __DIR__ . '/tools/profiling',
 ]);
 
-return PhpCsFixer\Config::create()
+return (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)
     ->setRules([
         '@Symfony' => true,
+        '@PHP71Migration' => true,
+        '@PHP71Migration:risky' => true,
         'array_indentation' => true,
         'cast_spaces' => [
             'space' => 'single',
@@ -31,19 +31,20 @@ return PhpCsFixer\Config::create()
         'method_chaining_indentation' => true,
         'no_alias_functions' => false,
         'no_superfluous_phpdoc_tags' => false,
-        'non_printable_character' => [
-            'use_escape_sequences_in_strings' => true,
-        ],
         'phpdoc_align' => [
             'align' => 'left',
         ],
         'phpdoc_summary' => false,
         'protected_to_private' => false,
-        'psr4' => false,
+        'psr_autoloading' => false,
         'self_accessor' => false,
         'yoda_style' => null,
         'single_line_throw' => false,
         'no_alias_language_construct_call' => false,
+        'use_arrow_functions' => false,
+        'declare_strict_types' => false,
+        'random_api_migration' => false,
+        'void_return' => false,
     ])
     ->setFinder($finder)
-    ->setCacheFile(__DIR__.'/var/.php_cs.cache');
+    ->setCacheFile(__DIR__ . '/var/.php_cs.cache');
